@@ -1,7 +1,5 @@
 import { renderBlock } from "./lib.js";
 export function renderSearchFormBlock(arrivalDate, departureDate) {
-    console.log(arrivalDate, "arrival");
-    console.log(departureDate, "depa");
     renderBlock("search-form-block", `
     <form>
       <fieldset class="search-filedset">

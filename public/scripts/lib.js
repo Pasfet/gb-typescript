@@ -1,8 +1,8 @@
-export function renderBlock(elementId, html) {
+export const renderBlock = (elementId, html) => {
     const element = document.getElementById(elementId);
     element.innerHTML = html;
-}
-export function renderToast(message, action) {
+};
+export const renderToast = (message, action) => {
     let messageText = "";
     if (message != null) {
         messageText = `
@@ -22,7 +22,7 @@ export function renderToast(message, action) {
             renderToast(null, null);
         };
     }
-}
+};
 export const getDate = (next = false, lastDayOfMonth = false) => {
     const today = new Date();
     const year = today.getFullYear();
@@ -41,16 +41,4 @@ export const getDate = (next = false, lastDayOfMonth = false) => {
         month = `0${month}`;
     }
     return `${year}-${month}-${day}`;
-    // const day =
-    // 	date.getDate() >= 10
-    // 		? next
-    // 			? date.getDate()
-    // 			: date.getDate() + 1
-    // 		: next
-    // 		? `0${date.getDate() + 1}`
-    // 		: `0${date.getDate()}`;
-    // const month =
-    // 	date.getMonth() + 1 >= 10 ? date.getMonth() + 1 : `0${date.getMonth() + 1}`;
-    // const year = date.getFullYear();
-    // return next ? `${year}-${month}-${day}` : `${year}-${month}-${day}`;
 };
